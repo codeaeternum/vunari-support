@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ayuda y soporte de Vunari para iPhone y iPad.">
+  <meta name="robots" content="index,follow">
+  <title>Soporte de Vunari</title>
+  <style>
+    :root { color-scheme:light dark; --forest:#0b3d32; --mint:#42d698; --paper:#fbfaf5; --ink:#17201d; --muted:#5d6965; --line:#d7dfdc; --surface:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--paper); color:var(--ink); }
+    header { padding:50px 22px 40px; background:var(--forest); color:white; }
+    header div, main, footer { width:min(820px,100%); margin:auto; }
+    h1 { margin:8px 0 10px; font-size:clamp(2rem,7vw,3.35rem); line-height:1.08; letter-spacing:-.035em; }
+    h2 { margin:2.2rem 0 .8rem; font-size:1.4rem; }
+    h3 { margin:.15rem 0 .35rem; font-size:1.06rem; }
+    main { padding:34px 22px 50px; }
+    .eyebrow { color:var(--mint); font-size:.76rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .lede { max-width:650px; color:#dce9e4; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:.55rem 1rem; margin:0 0 24px; font-size:.92rem; }
+    .site-nav a { color:white; text-underline-offset:4px; }
+    .site-nav strong { color:var(--mint); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .card { padding:18px; background:var(--surface); border:1px solid var(--line); border-radius:16px; }
+    .step { color:#087253; font-weight:800; }
+    .notice { padding:16px 18px; border-left:5px solid var(--mint); border-radius:12px; background:color-mix(in srgb,var(--mint) 9%,transparent); }
+    li + li { margin-top:.45rem; }
+    a { color:#087253; }
+    footer { padding:0 22px 38px; color:var(--muted); font-size:.9rem; }
+    @media (prefers-color-scheme:dark) { :root { --paper:#101513; --ink:#f2f5f3; --muted:#aeb9b5; --line:#33403b; --surface:#18201d; } a,.step { color:#62e2ae; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="privacy-es.html">Privacidad</a>
+        <strong aria-current="page">Soporte</strong>
+        <a href="support-en.html" lang="en" hreflang="en">English</a>
+      </nav>
+      <div class="eyebrow">Vunari · Ayuda</div>
+      <h1>Volvamos a poner la mesa.</h1>
+      <p class="lede">Encuentra soluciones rápidas y prepara un reporte técnico que no incluye apodos, invitaciones, cartas, saldos ni datos de tu red Wi‑Fi.</p>
+    </div>
+  </header>
+
+  <main>
+    <h2>Ayuda dentro de Vunari</h2>
+    <ol>
+      <li>En Inicio, toca tu apodo o avatar para abrir <strong>Perfil y ajustes</strong>.</li>
+      <li>Entra a <strong>Ayuda y comentarios</strong>.</li>
+      <li>Elige <strong>Revisar conexión cercana</strong>, <strong>Reportar un problema</strong>, <strong>Sugerir una función</strong> o <strong>Copiar datos de diagnóstico</strong>.</li>
+    </ol>
+
+    <div class="notice">
+      <strong>Tú controlas el envío.</strong> Reportar o sugerir abre la hoja de compartir de iOS con un borrador. Vunari no lo envía automáticamente: revisa el texto y, si deseas recibir ayuda, envíalo a <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a> desde tu app de correo.
+    </div>
+
+    <h2>Soluciones rápidas</h2>
+    <div class="grid">
+      <section class="card">
+        <div class="step">Mesa cercana</div>
+        <h3>No aparece la mesa</h3>
+        <p>Mantén Vunari visible en ambos dispositivos, activa Wi‑Fi y permite <strong>Red local</strong> en Ajustes de iOS. Ambos deben usar la misma versión de Vunari y estar en la misma red.</p>
+      </section>
+      <section class="card">
+        <div class="step">Invitación</div>
+        <h3>La cámara no está disponible</h3>
+        <p>Puedes copiar y pegar la invitación privada. No necesitas permitir Fotos. Evita guardar o enviar capturas del QR.</p>
+      </section>
+      <section class="card">
+        <div class="step">Regreso</div>
+        <h3>Se perdió la conexión</h3>
+        <p>Vuelve a Inicio y usa la tarjeta de continuación de la misma mesa. No borres el acceso de invitado si conserva una mano activa.</p>
+      </section>
+      <section class="card">
+        <div class="step">Cuenta clara</div>
+        <h3>Necesitan conciliar las cantidades</h3>
+        <p>Abre <strong>Historial de mesa</strong> y revisa saldos, aportes, cargos, abonos por resultado y adeudos. Vunari solo registra cantidades; no procesa pagos ni mueve o custodia dinero. Cualquier liquidación entre participantes ocurre fuera de la app.</p>
+      </section>
+    </div>
+
+    <h2>Qué incluir en un reporte</h2>
+    <ul>
+      <li>Qué estabas intentando hacer.</li>
+      <li>Qué ocurrió y qué esperabas que ocurriera.</li>
+      <li>Los pasos mínimos para repetirlo.</li>
+      <li>El diagnóstico generado por Vunari, que contiene versión de la app, versión de iOS y tipo de dispositivo.</li>
+    </ul>
+    <p>No incluyas códigos QR, invitaciones privadas, manos, saldos, apodos familiares, contraseñas ni información de tu Wi‑Fi. Si una captura es indispensable, oculta esos datos primero.</p>
+
+    <h2>Privacidad y eliminación</h2>
+    <p>En <strong>Perfil y ajustes → Privacidad y datos</strong> puedes borrar perfil y preferencias, reglas de la familia o todos los datos de juego. Lee cada advertencia: borrar el acceso de una mesa activa puede impedir recuperar ese asiento o mano.</p>
+    <p>Consulta la <a href="privacy-es.html">política de privacidad</a> para conocer el tratamiento de datos de la versión 0.9.0.</p>
+
+    <h2>Contacto</h2>
+    <p>Para solicitar ayuda o enviar comentarios sobre la beta, escribe a <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a>. Antes de enviar, elimina invitaciones privadas, códigos QR, manos, saldos, apodos y datos de tu red.</p>
+  </main>
+
+  <footer>Soporte de Vunari 0.9.0 · iPhone y iPad.</footer>
+</body>
+</html>

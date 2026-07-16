@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vunari help and support for iPhone and iPad.">
+  <meta name="robots" content="index,follow">
+  <title>Vunari Support</title>
+  <style>
+    :root { color-scheme:light dark; --forest:#0b3d32; --mint:#42d698; --paper:#fbfaf5; --ink:#17201d; --muted:#5d6965; --line:#d7dfdc; --surface:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--paper); color:var(--ink); }
+    header { padding:50px 22px 40px; background:var(--forest); color:white; }
+    header div, main, footer { width:min(820px,100%); margin:auto; }
+    h1 { margin:8px 0 10px; font-size:clamp(2rem,7vw,3.35rem); line-height:1.08; letter-spacing:-.035em; }
+    h2 { margin:2.2rem 0 .8rem; font-size:1.4rem; }
+    h3 { margin:.15rem 0 .35rem; font-size:1.06rem; }
+    main { padding:34px 22px 50px; }
+    .eyebrow { color:var(--mint); font-size:.76rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .lede { max-width:650px; color:#dce9e4; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:.55rem 1rem; margin:0 0 24px; font-size:.92rem; }
+    .site-nav a { color:white; text-underline-offset:4px; }
+    .site-nav strong { color:var(--mint); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .card { padding:18px; background:var(--surface); border:1px solid var(--line); border-radius:16px; }
+    .step { color:#087253; font-weight:800; }
+    .notice { padding:16px 18px; border-left:5px solid var(--mint); border-radius:12px; background:color-mix(in srgb,var(--mint) 9%,transparent); }
+    li + li { margin-top:.45rem; }
+    a { color:#087253; }
+    footer { padding:0 22px 38px; color:var(--muted); font-size:.9rem; }
+    @media (prefers-color-scheme:dark) { :root { --paper:#101513; --ink:#f2f5f3; --muted:#aeb9b5; --line:#33403b; --surface:#18201d; } a,.step { color:#62e2ae; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="privacy-en.html">Privacy</a>
+        <strong aria-current="page">Support</strong>
+        <a href="support-es.html" lang="es-MX" hreflang="es-MX">Español</a>
+      </nav>
+      <div class="eyebrow">Vunari · Help</div>
+      <h1>Let’s get your table back together.</h1>
+      <p class="lede">Find quick fixes and prepare a technical report that excludes nicknames, invitations, cards, balances, and Wi‑Fi network details.</p>
+    </div>
+  </header>
+
+  <main>
+    <h2>Help inside Vunari</h2>
+    <ol>
+      <li>On Home, tap your nickname or avatar to open <strong>Profile &amp; Settings</strong>.</li>
+      <li>Open <strong>Help &amp; Feedback</strong>.</li>
+      <li>Choose <strong>Check Nearby Connection</strong>, <strong>Report a Problem</strong>, <strong>Suggest a Feature</strong>, or <strong>Copy Diagnostic Information</strong>.</li>
+    </ol>
+
+    <div class="notice">
+      <strong>You control sending.</strong> Reporting or suggesting opens the iOS share sheet with a draft. Vunari does not send it automatically: review the text and, if you want help, send it to <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a> from your email app.
+    </div>
+
+    <h2>Quick fixes</h2>
+    <div class="grid">
+      <section class="card">
+        <div class="step">Nearby table</div>
+        <h3>The table does not appear</h3>
+        <p>Keep Vunari visible on both devices, turn on Wi‑Fi, and allow <strong>Local Network</strong> in iOS Settings. Both devices must run the same Vunari version and be on the same network.</p>
+      </section>
+      <section class="card">
+        <div class="step">Invitation</div>
+        <h3>The camera is unavailable</h3>
+        <p>You can copy and paste the private invitation. Photos permission is not required. Avoid saving or sending screenshots of the QR code.</p>
+      </section>
+      <section class="card">
+        <div class="step">Return</div>
+        <h3>The connection was lost</h3>
+        <p>Return to Home and use the continuation card for the same table. Do not delete guest access while it protects an active hand.</p>
+      </section>
+      <section class="card">
+        <div class="step">Clear settlement</div>
+        <h3>You need to reconcile the amounts</h3>
+        <p>Open <strong>Table History</strong> and review balances, contributions, charges, recorded round awards, and debts. Vunari only records amounts; it does not process payments or move or hold money. Any settlement between participants happens outside the app.</p>
+      </section>
+    </div>
+
+    <h2>What to include in a report</h2>
+    <ul>
+      <li>What you were trying to do.</li>
+      <li>What happened and what you expected.</li>
+      <li>The shortest steps that reproduce it.</li>
+      <li>The Vunari-generated diagnostic, which contains the app version, iOS version, and device type.</li>
+    </ul>
+    <p>Do not include QR codes, private invitations, hands, balances, family nicknames, passwords, or Wi‑Fi information. If a screenshot is essential, hide that information first.</p>
+
+    <h2>Privacy and deletion</h2>
+    <p>In <strong>Profile &amp; Settings → Privacy &amp; Data</strong>, you can delete the local profile and preferences, family rules, or all game data. Read each warning: deleting access to an active table may prevent recovery of that seat or hand.</p>
+    <p>Read the <a href="privacy-en.html">privacy policy</a> for details about data handling in version 0.9.0.</p>
+
+    <h2>Contact</h2>
+    <p>For help or beta feedback, email <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a>. Before sending, remove private invitations, QR codes, hands, balances, family nicknames, and network information.</p>
+  </main>
+
+  <footer>Vunari 0.9.0 support · iPhone and iPad.</footer>
+</body>
+</html>
