@@ -39,15 +39,15 @@
       </nav>
       <div class="eyebrow">Vunari · Privacidad</div>
       <h1>Tu mesa permanece con tu familia.</h1>
-      <p class="lede">Vunari es una app local-first para juegos familiares. La versión 0.9.0 no requiere cuentas, no tiene anuncios y no opera un servicio en la nube que recopile perfiles o partidas.</p>
+      <p class="lede">Vunari es una app local-first para juegos familiares. La versión 0.9.0 no exige una cuenta para jugar localmente o cerca, no tiene anuncios y ofrece una cuenta opcional con Game Center para preparar el juego en línea.</p>
     </div>
   </header>
 
   <main>
-    <p><strong>Fecha de vigencia:</strong> 16 de julio de 2026</p>
+    <p><strong>Fecha de vigencia:</strong> 19 de julio de 2026</p>
 
     <div class="note">
-      <strong>Resumen:</strong> Vunari guarda en tu dispositivo la información necesaria para jugar y reanudar partidas. Cuando eliges una mesa cercana, los dispositivos participantes intercambian directamente el estado necesario por la red local. Vunari no recibe esos datos en un servidor propio.
+      <strong>Resumen:</strong> Vunari guarda en tu dispositivo la información necesaria para jugar y reanudar partidas. Las mesas cercanas intercambian su estado directamente por la red local. Solo si eliges una cuenta en línea, Firebase Authentication recibe un identificador de cuenta y su vínculo con Game Center; la versión actual no sube perfiles locales ni partidas a esa cuenta.
     </div>
 
     <h2>Información que procesa la app</h2>
@@ -55,12 +55,15 @@
       <li><strong>Perfil local y preferencias:</strong> apodo, avatar ilustrado elegido dentro de la app, idioma, apariencia, vibración y opciones de accesibilidad.</li>
       <li><strong>Datos de juego:</strong> nombres de jugadores, reglas, cartas, turnos, saldos o puntos, aportes adicionales registrados, resultados, historial y avance reanudable.</li>
       <li><strong>Mesas cercanas:</strong> invitaciones privadas, credenciales del asiento, estado compartido de la mesa y datos cifrados de recuperación. La app puede guardar credenciales protegidas en el llavero del dispositivo.</li>
+      <li><strong>Cuenta opcional:</strong> Firebase Authentication genera un identificador de usuario y guarda el vínculo con el identificador de jugador de Game Center cuando eliges conectarlo. Vunari consulta en el dispositivo el nombre visible y las restricciones de juego o comunicación que proporciona Game Center.</li>
+      <li><strong>Diagnóstico de autenticación:</strong> el SDK de Firebase Authentication declara datos técnicos de diagnóstico no vinculados a tu identidad para analítica operativa del servicio. Vunari no integra Firebase Analytics ni usa estos datos para publicidad o rastreo.</li>
       <li><strong>Diagnóstico que tú controlas:</strong> versión de Vunari, versión de iOS y categoría del dispositivo. Solo se copia o comparte cuando tú pulsas la acción correspondiente y eliges un destino.</li>
     </ul>
 
     <h2>Cómo se usa y comparte</h2>
     <p>La información local se usa para mostrar tu perfil, aplicar tus preferencias, ejecutar las reglas, conservar el historial y permitir que una partida compatible se reanude.</p>
     <p>En una mesa cercana, los dispositivos de los jugadores se comunican directamente por la red local. Los participantes reciben únicamente la información necesaria para su asiento y el estado público de la mesa. Esa comunicación no pasa por una cuenta o backend de Vunari.</p>
+    <p>La cuenta opcional se usa para autenticación, recuperación futura entre dispositivos y preparación de funciones sociales. Firebase Authentication, operado por Google, procesa el identificador de usuario, la credencial de Game Center y datos técnicos de diagnóstico no vinculados para analítica operativa del servicio. Apple opera Game Center. Consulta la <a href="https://firebase.google.com/support/privacy">información de privacidad de Firebase</a> y la <a href="https://www.apple.com/legal/privacy/">política de privacidad de Apple</a>.</p>
     <p>Si usas la hoja de compartir para enviar un reporte, tú decides qué app, persona o canal lo recibe. Vunari no transmite automáticamente el reporte ni su texto.</p>
     <p>Si escribes voluntariamente al correo de soporte, el buzón recibe tu dirección de remitente y el contenido que decidas enviar. Esa información se usa únicamente para responder y ayudar a resolver tu solicitud. Estas páginas no incluyen formularios, analítica ni rastreo.</p>
 
@@ -72,22 +75,24 @@
 
     <h2>Lo que Vunari no hace en esta versión</h2>
     <ul>
-      <li>La app no crea cuentas ni solicita o transmite tu correo, teléfono, contactos o ubicación.</li>
-      <li>No incluye publicidad, analítica de terceros ni tecnologías de rastreo.</li>
+      <li>La app no exige una cuenta y no solicita tu correo, teléfono, contactos o ubicación. Si eliges Game Center, crea o recupera una cuenta Vunari mediante Firebase Authentication.</li>
+      <li>No incluye publicidad, Firebase Analytics ni tecnologías de rastreo. Firebase Authentication sí declara el diagnóstico no vinculado descrito arriba con finalidad de analítica operativa.</li>
       <li>No vende información personal.</li>
       <li>No cobra, custodia ni transfiere dinero. Los saldos son un registro que la familia decide usar dentro de su partida.</li>
       <li>No sincroniza deliberadamente perfiles o partidas con una nube de Vunari. Los respaldos generales del dispositivo, si están activos, dependen de los ajustes y servicios de Apple.</li>
+      <li>Las partidas por internet, amigos, matchmaking, notificaciones remotas y voz todavía no están activos en esta versión.</li>
     </ul>
 
     <h2>Conservación y eliminación</h2>
     <p>Los datos permanecen en el dispositivo hasta que los borras o iOS elimina su almacenamiento. Desde <strong>Perfil y ajustes → Privacidad y datos</strong> puedes borrar por separado el perfil y preferencias, las reglas de la familia o todos los datos de juego. Si buscas una eliminación deliberada y completa, usa esos controles antes de desinstalar; las credenciales protegidas por el llavero y los respaldos generales siguen el comportamiento y los ajustes de Apple.</p>
+    <p>Si conectaste una cuenta, desde <strong>Perfil y ajustes → Cuenta y juego en línea</strong> puedes cerrar sesión o eliminar la identidad cloud y su vínculo con Game Center. Esa acción no borra automáticamente los datos locales, que conservan sus controles separados. Las identidades temporales anónimas pueden eliminarse automáticamente después de quedar inactivas.</p>
     <p>Borrar información en un dispositivo no borra las copias que otros participantes ya conserven en sus propios dispositivos. La app advierte cuando eliminar una credencial podría impedir recuperar una mano o asiento activo.</p>
 
     <h2>Seguridad</h2>
-    <p>Vunari limita sus datos al dispositivo y a la mesa cercana elegida. Las conexiones cercanas usan un secreto de invitación para proteger la sesión; las recuperaciones sensibles se cifran y las credenciales se guardan mediante las protecciones del sistema cuando corresponde. Ningún sistema es infalible: comparte los códigos privados solo con las personas que jugarán en tu mesa.</p>
+    <p>Vunari limita los datos de juego al dispositivo y a la mesa cercana elegida. Las conexiones cercanas usan un secreto de invitación; las recuperaciones sensibles se cifran y las credenciales se guardan mediante las protecciones del sistema. La identidad opcional usa Firebase Authentication y Game Center, y no convierte por sí sola una cuenta en permiso para ocupar un asiento. Ningún sistema es infalible: comparte los códigos privados solo con las personas que jugarán en tu mesa.</p>
 
     <h2>Cambios a esta política</h2>
-    <p>La política se actualizará antes de introducir funciones que cambien materialmente el tratamiento de datos, como cuentas, partidas por internet, amigos, notificaciones remotas o analítica. La fecha de vigencia de la versión publicada aparecerá al inicio de esta página.</p>
+    <p>La política se actualizará antes de introducir funciones que cambien materialmente el tratamiento de datos, como partidas por internet, amigos, notificaciones remotas, voz o analítica. La fecha de vigencia de la versión publicada aparecerá al inicio de esta página.</p>
 
     <h2>Preguntas y ayuda</h2>
     <p>Consulta la <a href="support-es.html">página de soporte de Vunari</a> para obtener ayuda y preparar un reporte seguro desde la app. Para preguntas de privacidad, escribe a <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a>.</p>

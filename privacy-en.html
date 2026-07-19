@@ -39,15 +39,15 @@
       </nav>
       <div class="eyebrow">Vunari · Privacy</div>
       <h1>Your table stays with your family.</h1>
-      <p class="lede">Vunari is a local-first family game app. Version 0.9.0 requires no accounts, contains no ads, and does not operate a cloud service that collects profiles or games.</p>
+      <p class="lede">Vunari is a local-first family game app. Version 0.9.0 requires no account for local or nearby play, contains no ads, and offers an optional Game Center account to prepare for online play.</p>
     </div>
   </header>
 
   <main>
-    <p><strong>Effective date:</strong> July 16, 2026</p>
+    <p><strong>Effective date:</strong> July 19, 2026</p>
 
     <div class="note">
-      <strong>In short:</strong> Vunari stores on your device the information needed to play and resume games. When you choose nearby play, participating devices exchange the required state directly over the local network. Vunari does not receive that data on its own server.
+      <strong>In short:</strong> Vunari stores on your device the information needed to play and resume games. Nearby tables exchange their state directly over the local network. Only if you choose an online account does Firebase Authentication receive an account identifier and its Game Center link; the current version does not upload local profiles or games to that account.
     </div>
 
     <h2>Information the app processes</h2>
@@ -55,12 +55,15 @@
       <li><strong>Local profile and preferences:</strong> nickname, an illustrated avatar selected inside the app, language, appearance, haptics, and accessibility options.</li>
       <li><strong>Game data:</strong> player names, rules, cards, turns, balances or points, additional contributions recorded, results, history, and resumable progress.</li>
       <li><strong>Nearby tables:</strong> private invitations, seat credentials, shared table state, and encrypted recovery data. The app may store protected credentials in the device Keychain.</li>
+      <li><strong>Optional account:</strong> Firebase Authentication generates a user identifier and stores the link to the Game Center player identifier when you choose to connect it. On device, Vunari reads the display name and gaming or communication restrictions provided by Game Center.</li>
+      <li><strong>Authentication diagnostics:</strong> the Firebase Authentication SDK declares technical diagnostic data that is not linked to your identity for service analytics. Vunari does not integrate Firebase Analytics or use this data for advertising or tracking.</li>
       <li><strong>Diagnostics you control:</strong> Vunari version, iOS version, and device category. This information is copied or shared only when you tap the corresponding action and choose a destination.</li>
     </ul>
 
     <h2>How information is used and shared</h2>
     <p>Local information is used to display your profile, apply your preferences, run game rules, preserve history, and allow a compatible game to resume.</p>
     <p>During a nearby game, player devices communicate directly over the local network. Participants receive only the information needed for their seat and the public table state. This communication does not pass through a Vunari account or backend.</p>
+    <p>The optional account is used for authentication, future cross-device recovery, and preparation for social features. Firebase Authentication, operated by Google, processes the user identifier, Game Center credential, and unlinked technical diagnostic data for service analytics. Apple operates Game Center. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</p>
     <p>If you use the system share sheet to send a report, you decide which app, person, or channel receives it. Vunari does not automatically transmit the report or its text.</p>
     <p>If you voluntarily email support, the mailbox receives your sender address and the content you choose to send. That information is used only to reply and help resolve your request. These pages include no forms, analytics, or tracking.</p>
 
@@ -72,22 +75,24 @@
 
     <h2>What this version of Vunari does not do</h2>
     <ul>
-      <li>The app does not create accounts or request or transmit your email address, phone number, contacts, or location.</li>
-      <li>It includes no advertising, third-party analytics, or tracking technologies.</li>
+      <li>The app does not require an account and does not request your email address, phone number, contacts, or location. If you choose Game Center, it creates or recovers a Vunari account through Firebase Authentication.</li>
+      <li>It includes no advertising, Firebase Analytics, or tracking technologies. Firebase Authentication does declare the unlinked diagnostics described above for service analytics.</li>
       <li>It does not sell personal information.</li>
       <li>It does not charge, hold, or transfer money. Balances are a record that a family may choose to use within its own game.</li>
       <li>It does not intentionally sync profiles or games to a Vunari cloud. General device backups, if enabled, are controlled by your Apple settings and services.</li>
+      <li>Online games, friends, matchmaking, remote notifications, and voice are not active in this version.</li>
     </ul>
 
     <h2>Retention and deletion</h2>
     <p>Data remains on the device until you delete it or iOS removes its storage. In <strong>Profile &amp; Settings → Privacy &amp; Data</strong>, you can separately delete the local profile and preferences, family rules, or all game data. For deliberate and complete cleanup, use these controls before uninstalling; Keychain-protected credentials and general device backups follow Apple’s behavior and your Apple settings.</p>
+    <p>If you connected an account, use <strong>Profile &amp; Settings → Account &amp; Online Play</strong> to sign out or delete the cloud identity and its Game Center link. That action does not automatically delete local data, which keeps separate controls. Temporary anonymous identities may be removed automatically after becoming inactive.</p>
     <p>Deleting information from one device does not delete copies already kept by other participants on their own devices. The app warns you when deleting a credential could prevent recovery of an active hand or seat.</p>
 
     <h2>Security</h2>
-    <p>Vunari limits its data to the device and the nearby table you choose. Nearby connections use an invitation secret to protect the session; sensitive recoveries are encrypted and credentials use system protections when appropriate. No system is infallible: share private codes only with the people playing at your table.</p>
+    <p>Vunari limits game data to the device and the nearby table you choose. Nearby connections use an invitation secret; sensitive recoveries are encrypted and credentials use system protections. Optional identity uses Firebase Authentication and Game Center, and an account alone never grants a table seat. No system is infallible: share private codes only with the people playing at your table.</p>
 
     <h2>Changes to this policy</h2>
-    <p>This policy will be updated before features that materially change data handling are introduced, such as accounts, online games, friends, remote notifications, or analytics. The effective date of the published version will appear at the top of this page.</p>
+    <p>This policy will be updated before features that materially change data handling are introduced, such as online games, friends, remote notifications, voice, or analytics. The effective date of the published version will appear at the top of this page.</p>
 
     <h2>Questions and help</h2>
     <p>Visit the <a href="support-en.html">Vunari support page</a> for help and instructions for preparing a privacy-safe report from the app. For privacy questions, email <a href="mailto:soporte@codeaeternum.com">soporte@codeaeternum.com</a>.</p>
